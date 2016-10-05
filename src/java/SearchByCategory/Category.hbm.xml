@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 13, 2016 1:03:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="SearchByCategory.Category" table="CATEGORY" schema="AMAN">
+        <id name="companyid" type="int">
+            <column name="COMPANYID" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="companyname" type="string">
+            <column name="COMPANYNAME" length="100" />
+        </property>
+        <property name="post" type="string">
+            <column name="POST" length="100" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="100" />
+        </property>
+        <property name="category" type="string">
+            <column name="CATEGORY" length="100" />
+        </property>
+        <property name="openingdate" type="date">
+            <column name="OPENINGDATE" length="10" />
+        </property>
+        <property name="closingdate" type="date">
+            <column name="CLOSINGDATE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

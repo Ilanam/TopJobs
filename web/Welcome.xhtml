@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+    <h:head>
+        <title>Top Jobs Welcome</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <style>
+body {margin:0;}
+
+div.polaroid{
+    margin: auto; 
+    padding: 1px 16px; 
+    height: 500px;  
+}
+input[type=text], select {
+    width: 80%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #21618C;
+    color: white;
+    padding: 14px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #17c;
+}
+</style>
+    </h:head>
+    <h:body>
+        <ui:include src="header.xhtml"></ui:include>
+        
+        <h:form>
+            <br/><br/>
+            <h2 align="center" style="font-family: Verdana; color: orangered; font-size: 15pt; font-weight: bold; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                WELCOME
+                <h:outputText style="color: orangered" id="o1" value="#{registrationForm.firstName}"/>&nbsp;
+            <h:outputText style="color: orangered" id="o2" value="#{registrationForm.lastName}"/>
+        </h2>
+        <h2 align="center" style="font-family: Verdana; color: black; font-size: 15pt; font-weight: bold;">
+            You have successfully registered with our Web-site.<br/>
+            Your User ID is:
+        </h2>
+           <h2 align="center" style="font-family: Verdana; color: black; font-size: 15pt; font-weight: bold;">
+           <h:outputText style="color: orangered;" id="o3" value="#{registerUser.userID}" />
+           </h2>
+         <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>
+                <h:commandButton id="btn" style="text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 28px; color: white" value="Login" action="ValidationLogin.xhtml"></h:commandButton>
+            </td>
+        </tr>
+        </h:form>         
+        <ui:include src="fixfooter.xhtml"></ui:include>
+    </h:body>
+</html>
+

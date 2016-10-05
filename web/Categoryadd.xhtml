@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ADD SKILL</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+            input[type=submit] {
+    width: 8%;
+    background-color: #21618C;
+    color: wheat;
+    padding: 6px 12px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #17c;
+}
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton style="background-color: red; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; float: right; font-size: 18px; color: white" value="Logout" action="#{adminBean.logout}"></h:commandButton>
+            <td align="left" width="180">
+                    <img alt="top jobs logo" src="images/log.png" width="325" height="132" align="right" style="border-radius: 8px" />
+            </td>
+        <h2 style="color: #21618C">ADD DATA (Primary Company-ID) !</h2>
+            <h:panelGrid columns="2" style="color: #21618C; font-family: fantasy; font-weight: bold;">
+               Company ID: <h:inputText value="#{categorys.companyid}"/>
+               Company Name: <h:inputText value="#{categorys.companyname}"/>
+               Post : <h:inputText value="#{categorys.post}"/>
+               City: <h:inputText value="#{categorys.city}"/>
+               Category: <h:inputText value="#{categorys.category}"/>
+               Opening Date: <h:inputText value="#{categorys.openingdate}">
+                             <f:convertDateTime pattern="yyyy-MM-dd"/>
+                             </h:inputText>
+               Closing Date: <h:inputText value="#{categorys.closingdate}">
+               <f:convertDateTime pattern="yyyy-MM-dd"/>
+               </h:inputText>
+               
+               <h:commandButton value="Add Data" action="#{categorys.save()}" style="text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 20px; color: white; width: 120px;" />
+               
+            </h:panelGrid>
+       </h:form> <br></br><br></br>
+       <h:dataTable value="#{categorys.getallrecords()}" var="ca" style="border-collapse: collapse; color: brown" border="1">
+            
+            <h:column>
+                <f:facet name="header">Company ID</f:facet>
+                #{ca.companyid}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Company Name</f:facet>
+                #{ca.companyname}
+            </h:column>
+            <h:column>                   
+              <f:facet name="header">Post</f:facet>               
+                #{ca.post}
+            </h:column>
+            <h:column>                   
+              <f:facet name="header">City</f:facet>               
+                #{ca.city}
+            </h:column>
+            <h:column>                   
+              <f:facet name="header">Category</f:facet>               
+                #{ca.category}
+            </h:column>
+            <h:column>                   
+              <f:facet name="header">Opening Date</f:facet>               
+                #{ca.openingdate}
+            </h:column>
+            <h:column>                   
+              <f:facet name="header">Closing Date</f:facet>               
+                #{ca.closingdate}
+            </h:column>
+             
+        </h:dataTable>
+    
+    </h:body>
+</html>
+

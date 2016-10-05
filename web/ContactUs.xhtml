@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+    <h:head>
+        <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <style>
+            body {margin:0;}
+
+    #tab{          
+    list-style-type: none;
+    margin: 0;
+    background-image: url("images/contactus.jpg");
+    background-size: cover;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    }
+    .contact{
+    font-family: Verdana; 
+    color: orangered; 
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; 
+    font-size: 24pt; 
+    font-weight: bold;
+        
+}
+        </style>
+    </h:head>
+        <h:body style="background-image: url('images/bg.jpg'); background-size: cover;">
+            <ui:include src="header.xhtml"></ui:include>
+            
+        <div id="tab">
+        <table>
+            <tr>
+            <td>
+        <p align="left" class="contact">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; Contact Us</p>
+            </td>
+            </tr>
+                <tr>
+                <td>
+                    <p style=" font-size: 15pt; font-family: Verdana, Arial, Helvetica, sans-serif; color: blue" align="justify">
+                        
+                        <b style="color: orangered;"> &nbsp; Head-Office</b>: Business Park, Top Jobs building, Mumbai, Maharastra 400001.   
+                        <br/><br/>
+                        
+                        <b style="color: orangered;">&nbsp; Web-site</b>: www.topjobs.com
+                        <br/><br/>
+                        
+                        <b style="color: orangered;">&nbsp; Email</b>: mastopjobs@topjobs.com
+                        <br/><br/>
+                        
+                        <b style="color: orangered;">&nbsp; Contact Number</b> :98******71/99******32/82******27
+                        <br/><br/>
+                        
+                        <b style="color: orangered;">&nbsp; Fax</b>: 022-21****12
+                        <br/><br/> <br/><br/> <br/><br/>
+                    </p>
+                </td>
+                </tr>
+        
+            
+            </table>
+        </div>
+        <ui:include src="footer.xhtml"></ui:include>
+    </h:body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/Registration</property>
+    <property name="hibernate.connection.username">aman</property>
+    <property name="hibernate.connection.password">aman</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</property>
+    <mapping resource="bean/RegisterUser.hbm.xml"/>
+    <mapping class="utility.HibernateUtil"/>
+    <mapping resource="SearchByCategory/Category.hbm.xml"/>
+    <mapping class="crudpojo.NewHibernateUtil"/>
+    <mapping resource="SearchBySkill/Skill.hbm.xml"/>
+    <mapping resource="SearchByCompany/Company.hbm.xml"/>
+    <mapping resource="SearchByCity/City.hbm.xml"/>
+    <mapping resource="whatwhere/Whatwhere.hbm.xml"/>
+    <mapping resource="crudcompany/crudcompany.hbm.xml"/>
+    <mapping resource="crudcity/crudcity.hbm.xml"/>
+    <mapping resource="crudskill/crudskill.hbm.xml"/>
+    <mapping resource="crudwhatwhere/crudwhatwhere.hbm.xml"/>
+    <mapping resource="crudcategory/crudcategory.hbm.xml"/>
+    
+  </session-factory>
+</hibernate-configuration>

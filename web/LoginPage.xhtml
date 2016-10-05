@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <style>
+body {margin:0;}
+
+.adminuser{
+    display: block;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+    padding: 16px 34px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+div.polaroid{
+    margin: auto; 
+    padding: 1px 16px; 
+    height: 500px;
+    
+}
+
+</style>
+    </h:head>
+    <h:body style="background-image: url('images/.jpg'); background-size: cover;">
+        
+            <ui:include src="header.xhtml"></ui:include>
+            
+            <p align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif; color: navy; font-size: 15pt; font-weight: bold">
+                &nbsp;&nbsp;
+                <h:form>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="AdminLogin.xhtml">
+                        <img alt="adminlogin" src="images/icons/admins.png" style="width: 150px; height: 200px" />
+                    </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="ValidationLogin.xhtml">
+                            <img alt="userlogin" src="images/icons/user.png" style="width: 200px; height: 200px" />
+                    </a>
+                </h:form>
+            </p>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <ui:include src="fixfooter.xhtml"></ui:include>
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Base Template</title>
+        <link rel="stylesheet" href="css/style.css"/>
+            <style>
+body {margin:0;}
+
+.about{
+    font-family: Verdana; 
+    color: orangered; 
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; 
+    font-size: 24pt; 
+    font-weight: bold;
+        
+}
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+  width: 1200px;
+  }
+
+.flex-item{
+    
+    width: 600px;
+    height: 650px;
+    margin: 10px;
+}
+
+</style>
+    </h:head>
+    <h:body style="background-image: url('images/bg.jpg'); background-size: cover;">
+        <ui:include src="header.xhtml"></ui:include>
+        <h:form>
+            
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p align="left" class="about">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; About Us</p>
+            
+            <div style="padding: 0px 18px; height: available; width: 500pt;">
+            <p style="color: blue; font-size: 12pt; font-family: Verdana, Arial, sans-serif;" >
+            Top Jobs Inc. is a company that renders recruitment services in India. 
+            With a network of more than 30 offices nationwide, the company specializes in the
+            areas of IT's, Engineering, Sales, Marketing, Information Technology,
+            and Science.<br/><br/>
+            
+            It has tie-ups with the employers from
+            various sectors.<br/><br/>
+            
+            The company provides services for full-time, part-time,
+            and contractual employment.<br/><br/>
+            
+            Top Jobs also has a web-site that is updated with vacancy details. 
+            A job seeker can also visit a Top Jobs office to enquire about vacancies and submit the resume.<br/><br/>
+            
+            Each Top Jobs office has a Client Relationship Manager, who liaisons with the employers to understand their requirements. 
+            The office also has a Business Development Manager, who is responsible for gathering, sorting, and finally selecting job seekers.<br/><br/>
+            
+            The current system of Top Jobs has several limitations, the primary being its inability to adapt with the evolving technologies in the job marketing segment. 
+            Many competitors of the company already have their job portals and are providing recruitment services online.<br/><br/> 
+            
+            As a result, many vacancies remain unplaced, and the number of job seekers seeking 
+            Top Jobs services has declined, which subsequently has resulted in loss of revenue.<br/><br/>
+                    
+            </p>
+        </div>
+                </div>
+                <div align="right" class="flex-item">
+                <a><br/><br/>
+                    <img src="images/icons/aboutback.png" style="width: 500px; height: available;" />
+                </a>
+                </div>
+            </div>
+            </h:form>
+            
+            <ui:include src="footer.xhtml"></ui:include>
+            
+    </h:body>
+</html>
+

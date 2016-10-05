@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Admin Skill Edit Page</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <style>
+body {margin:0;}
+
+div.polaroid{
+    margin: auto; 
+    padding: 1px 16px; 
+    height: 500px;   
+}
+input[type=submit] {
+    width: 8%;
+    background-color: #21618C;
+    color: wheat;
+    padding: 6px 12px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #17c;
+}
+
+</style>
+    </h:head>
+    <h:body>
+        <ui:include src="header.xhtml"></ui:include>
+        
+            <h:form><br/><br/>
+            <h:commandButton style="background-color: red; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; float: right; font-size: 18px; color: white" value="Logout" action="#{adminBean.logout}">
+            </h:commandButton>
+            </h:form>
+             
+        <ui:include src="footer.xhtml"></ui:include>
+    </h:body>
+</html>
+

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    
+    <h:head>
+        <title>Top Jobs</title>
+        <link rel="stylesheet" href="css/style.css"/>
+                    
+        <style>
+body {margin:0;}
+
+div.polaroid{
+    margin: auto; 
+    padding: 1px 16px; 
+    height: 500px;   
+}
+
+input[type=submit] {
+    width: 8%;
+    background-color: #21618C;
+    color: wheat;
+    padding: 6px 12px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #17c;
+}
+input[type=text], select {
+    width: 80%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #21618C;
+    position: fixed;
+    top: auto;
+    width: 100%;
+}
+
+.ul1 {
+    list-style-type: none;
+    margin: 0;
+    background-image: url("images/2.jpg");
+    background-size: cover;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+    padding: 16px 34px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+li a:hover:not(.active) {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+li a.active {
+    background-color: orangered;
+    color: white;
+}
+</style>
+
+    </h:head>
+    <h:body style="background-image: url('images/bg.jpg'); background-size: cover;" >
+        
+            <h:form>
+            <table class="ul1" border="0" align="top" width="100%" style="height:60px">
+            <tr>
+                <td align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 55pt; color: orangered; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                    Top Jobs
+                </td>
+                <td align="left" width="180">
+                    <img alt="top jobs logo" src="images/log.png" width="325" height="142" align="right" style="border-radius: 8px;" />
+                </td>
+            </tr>
+        </table> <br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        </h:form>
+        
+            <h:form><br/><br/>
+                    <h:commandButton style="background-color: red; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; float: right; font-size: 18px; color: white;" value="Logout" action="#{loginController.logout}"/>
+            </h:form>
+            <p>
+                <h2 align="center" style="font-family: Verdana; color: orangered; font-size: 22pt; font-weight: bold; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Welcome to Top Jobs
+                </h2>
+                <h2 align="center" style="font-family: Verdana; color: black; font-size: 20pt; font-weight: lighter;">
+                        You can search Jobs according to:
+                </h2>
+                </p>    
+                <p>
+                    <h:form>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <b style="color: orangered; font-weight: bold; font-size: 24px; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                        KEYWORD:&nbsp;&nbsp;
+                    </b>
+                    <h:inputText value="#{wcont.keyword}" p:placeholder="eg.Spring,Java,C++ etc..." style="width: 200px;"></h:inputText> &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b style="color: orangered; font-weight: bold; font-size: 24px; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                        LOCATION:&nbsp;&nbsp;
+                    </b>
+                    <h:inputText value="#{wcont.keyword1}" p:placeholder="eg.Mumbai,Pune,Bangalore etc..." style="width: 200px;"></h:inputText> &nbsp;&nbsp;&nbsp;
+                    <h:commandButton value="Search" action="#{wcont.search()}" style="width: 100px; height: 42px; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 18px; color: white;"></h:commandButton> 
+                    </h:form>
+                </p>
+                <p align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif; color: navy; font-size: 15pt; font-weight: bold">&nbsp;&nbsp;
+                    <h:form>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h:commandButton id="btn2" value="JOBS BY SKILL" action="Skill.xhtml" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 18px;"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h:commandButton id="btn3" value="JOBS BY CITY" action="City.xhtml" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 18px;"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h:commandButton id="btn4" value="JOBS BY CATEGORY" action="Category.xhtml" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 18px;"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h:commandButton id="btn5" value="JOBS BY COMPANY" action="Company.xhtml" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 18px;"/>
+                    </h:form><br/><br/>
+                    
+                </p>     
+    
+            <ui:include src="footer.xhtml"></ui:include>
+    
+ </h:body>
+</html>

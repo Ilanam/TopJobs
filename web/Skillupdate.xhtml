@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>UPDATE SKILL</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+            input[type=submit] {
+    width: 8%;
+    background-color: #21618C;
+    color: wheat;
+    padding: 6px 12px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #17c;
+}
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton style="background-color: red; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; float: right; font-size: 18px; color: white" value="Logout" action="#{adminBean.logout}"></h:commandButton>
+            <td align="left" width="180">
+                    <img alt="top jobs logo" src="images/log.png" width="325" height="132" align="right" style="border-radius: 8px" />
+            </td>
+        </h:form>
+        
+        <h2 style="color: #21618C">SHOW DATA BY COMPANY NAME !</h2>
+        <h:form>
+            <h:panelGrid columns="2" style="color: #21618C; font-family: fantasy; font-weight: bold;">
+                Company Name: <h:inputText value="#{skills.companyname}"/>
+                <h:commandButton value="Show Data" action="#{skills.getbycompanyname()}" style="text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 20px; color: white; width: 120px;" />
+            </h:panelGrid></h:form><br/>
+            <!--h:panelGrid columns="2" style="color: #21618C; font-family: fantasy; font-weight: bold;">
+                Company Name:<h:outputText value="#{skills.companyname}"/>
+                Post:<h:outputText value="#{skills.post}"/>
+                City:<h:outputText value="#{skills.city}"/>
+                Stream:<h:outputText value="#{skills.stream}"/>
+                Skill:<h:outputText value="#{skills.skill}"/>
+                Opening Date:<h:outputText value="#{skills.openingdate}"/>
+                Closing Date:<h:outputText value="#{skills.closingdate}"/>
+            </h:panelGrid>
+        </h:form><br/><br/><br/><br/>
+       
+       <h:dataTable value="#{skills.getallrecords()}" var="s" style="border-collapse: collapse; color: brown;" border="1">
+            <h:column>
+                <f:facet name="header">Company Name</f:facet>
+                #{s.companyname}
+            </h:column>
+        <h:column>                   
+              <f:facet name="header">Post</f:facet>               
+                #{s.post}
+        </h:column>
+            <h:column>                   
+              <f:facet name="header">City</f:facet>               
+                #{s.city}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Stream</f:facet>               
+                #{s.stream}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Skill</f:facet>               
+                #{s.skill}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Opening-Date</f:facet>               
+                #{s.openingdate}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Closing-Date</f:facet>               
+                #{s.closingdate}
+        </h:column>
+        </h:dataTable-->
+       
+        
+        <h2 style="color: #21618C">UPDATE DATA (Primary Company Name) !</h2>
+        <h:form>
+            <!--h:panelGrid columns="2" style="color: #21618C; font-family: fantasy; font-weight: bold;">
+                Company Name: <h:inputText value="#{skills.companyname}"/>
+                <h:commandButton value="Show Data" action="#" style="text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 20px; color: white; width: 120px;" />
+            </h:panelGrid--><br/>
+                <h:panelGrid columns="2" style="color: #21618C; font-family: fantasy; font-weight: bold;">
+                    Company Name:<h:inputText value="#{skills.companyname}"/>
+                    Post:<h:inputText value="#{skills.post}"/>
+                    City:<h:inputText value="#{skills.city}"/>
+                    Stream:<h:inputText value="#{skills.stream}"/>
+                    Skill<h:inputText value="#{skills.skill}"/>
+                    Opening Date:<h:inputText value="#{skills.openingdate}">
+                    <f:convertDateTime pattern="yyyy-MM-dd"/>
+                    </h:inputText>
+                    
+                    Closing Date:<h:inputText value="#{skills.closingdate}">
+                    <f:convertDateTime pattern="yyyy-MM-dd"/>
+                    </h:inputText>
+                <h:commandButton value="Update Data" action="#{skills.update()}" style="text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 20px; color: white; width: 140px;" />
+                </h:panelGrid>   
+       </h:form><br/><br/>
+       <h:dataTable value="#{skills.getallrecords()}" var="s" style="border-collapse: collapse; color: brown;" border="1" >
+            <h:column>
+                <f:facet name="header">Company Name</f:facet>
+                #{s.companyname}
+            </h:column>
+        <h:column>                   
+              <f:facet name="header">Post</f:facet>               
+                #{s.post}
+        </h:column>
+            <h:column>                   
+              <f:facet name="header">City</f:facet>               
+                #{s.city}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Stream</f:facet>               
+                #{s.stream}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Skill</f:facet>               
+                #{s.skill}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Opening Date</f:facet>               
+                #{s.openingdate}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Closing Date</f:facet>               
+                #{s.closingdate}
+        </h:column>
+        </h:dataTable>
+        
+    </h:body>
+</html>
+

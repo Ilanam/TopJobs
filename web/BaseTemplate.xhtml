@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Base Template</title>
+        <style>
+div.polaroid{
+    margin: auto; 
+    padding: 1px 16px; 
+    height: 500px;   
+}
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+  width: auto;
+  }
+
+.flex-item{
+    
+    width: 600px;
+    height: 650px;
+    margin: 10px;
+}
+/* for blinking */
+
+.blink {
+	-webkit-animation: blink 1s linear infinite;
+	-moz-animation: blink 1s linear infinite;
+	-ms-animation: blink 1s linear infinite;
+	-o-animation: blink 1s linear infinite;
+	 animation: blink 1s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+.links{
+    color: #17c;
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+</style>
+    </h:head>
+    <h:body style="background-image: url('images/bg.jpg'); background-size: cover;" >
+   
+        <ui:include src="header.xhtml"></ui:include>
+                <h:form>
+                
+                <div class="flex-container">
+                <div class="flex-item">
+                    <p align="left" style="color: orangered; font-size: 35pt; font-family: Verdana, Arial, Helvetica, sans-serif; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                    &nbsp;&nbsp;&nbsp; TOP COMPANIES</p>
+            
+                        <a href="http://www.amazon.in" target="_blank">
+                        <img src="images/amazon.png" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="https://www.capgemini.com" target="_blank">
+                        <img src="images/capgemini.jpg" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="https://www.cognizant.com" target="_blank">
+                        <img src="images/cognizant.jpg" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="www.dell.co.in" target="_blank">
+                        <img src="images/dell.png" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="https://www.google.com" target="_blank">
+                        <img src="images/google.png"  height="100" width="100" />
+                        </a><br/><br/><br/><br/>
+                        
+                        <a href="https://www.hsbc.co.in" target="_blank">
+                        <img src="images/hsbc.jpg" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="www.hcl.com" target="_blank">
+                        <img src="images/hcl.jpg" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="https://www.ibm.com/in-en" target="_blank">
+                        <img src="images/ibm.png" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="https://www.infosys.com" target="_blank">
+                        <img src="images/infosys.png" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="https://www.lntinfotech.com" target="_blank">
+                        <img src="images/infotech.png" height="100" width="100" />
+                        </a><br/><br/><br/><br/>
+                        
+                        <a href="https://www.microsoft.com/en-in" target="_blank">
+                        <img src="images/microsoft.png" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="www.virtusapolaris.com" target="_blank">
+                        <img src="images/polaris.jpg" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="www.tcs.com" target="_blank">
+                        <img src="images/tcs.jpg" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="www.techmahindra.com" target="_blank">
+                        <img src="images/tech.png" height="100" width="100" />
+                        </a>&nbsp;
+                        
+                        <a href="www.wipro.com" target="_blank">
+                        <img src="images/wipro.jpg" height="100" width="100" />
+                        </a>
+                
+                </div>
+                    <div class="flex-item">
+                        <p align="right" style="color: orangered; font-size: 35pt; font-family: Verdana, Arial, Helvetica, sans-serif; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                        CURRENT VACANCIES </p>
+                        
+                        <p align="center">
+                            <a class="links" href="">HCL Training and Staffing Services</a><br/><br/>
+                        
+                            <a class="links" href="">360 Degree Cloud Technologies LTD.</a><br/><br/>
+                            
+                            <a class="links" href="">Pericent Technologies Pvt Ltd"</a><br/><br/>
+                        
+                            <a class="links" href="">MYJOBHUNT</a><br/><br/>
+                            
+                            <a class="links" href="">Siliconfo Technologies</a><br/><br/>
+                            
+                            <a class="links" href="">Softway</a><br/><br/>
+                            
+                            <a class="links" href="">HPC Sphere</a><br/><br/>
+                            
+                            <a class="links" href="">Blue whale solutions</a><br/><br/>
+                            
+                            <a class="links" href="">Evosoft Technologies</a><br/><br/>
+                            
+                        </p>
+            
+                    </div>    
+                </div>
+                </h:form>
+            <ui:include src="footer.xhtml"></ui:include>
+    </h:body>
+</html>
+

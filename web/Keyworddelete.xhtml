@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ADD SKILL</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+            input[type=submit] {
+    width: 8%;
+    background-color: #21618C;
+    color: wheat;
+    padding: 6px 12px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #17c;
+}
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton style="background-color: red; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; float: right; font-size: 18px; color: white" value="Logout" action="#{adminBean.logout}"></h:commandButton>
+            <td align="left" width="180">
+                    <img alt="top jobs logo" src="images/log.png" width="325" height="132" align="right" style="border-radius: 8px" />
+            </td>
+        </h:form>
+            <h2 style="color: #21618C">DELETE DATA (Primary Company Name)</h2>
+        <h:form>
+            <h:panelGrid columns="2" style="color: #21618C; font-family: fantasy; font-weight: bold;">
+                Company Name to Delete: <h:inputText value="#{whatwheres.companyname}"/>
+                <h:commandButton value="Delete Data" action="#{whatwheres.delete()}" style="text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 20px; color: white; width: 120px;" />
+            </h:panelGrid>
+        </h:form><br></br><br></br>
+        
+        <h:dataTable value="#{whatwheres.getallrecords()}" var="ww" style="border-collapse: collapse; color: brown;" border="1">
+            <h:column>
+                <f:facet name="header">Company Name</f:facet>
+                #{ww.companyname}
+            </h:column>
+        <h:column>                   
+              <f:facet name="header">Post</f:facet>               
+                #{ww.post}
+        </h:column>
+            <h:column>                   
+              <f:facet name="header">City</f:facet>               
+                #{ww.city}
+            </h:column>
+             <h:column>                   
+              <f:facet name="header">Stream</f:facet>               
+                #{w.stream}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Skill</f:facet>               
+                #{ww.skill}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Opening-Date</f:facet>               
+                #{ww.openingdate}
+        </h:column>
+             <h:column>                   
+              <f:facet name="header">Closing-Date</f:facet>               
+                #{ww.closingdate}
+        </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+

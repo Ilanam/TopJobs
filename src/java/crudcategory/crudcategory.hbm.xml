@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="crudcategory.Categorys" table="CATEGORY">
+      
+      <id name="companyid" type="int">
+            <column name="COMPANYID" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="companyname" type="string">
+            <column name="COMPANYNAME" length="100" />
+        </property>
+        <property name="post" type="string">
+            <column name="POST" length="100" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="100" />
+        </property>
+        <property name="category" type="string">
+            <column name="CATEGORY" length="100" />
+        </property>
+        <property name="openingdate" type="date">
+            <column name="OPENINGDATE" length="10" />
+        </property>
+        <property name="closingdate" type="date">
+            <column name="CLOSINGDATE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

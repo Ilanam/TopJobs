@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 13, 2016 1:03:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bean.RegisterUser" table="REGISTER">
+        <id name="userID" type="string">
+            <column name="USERID" length="40" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="firstName" type="string">
+            <column name="FIRSTNAME" length="20" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LASTNAME" length="20" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="10" />
+        </property>
+        <property name="dateofBirth" type="date">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="100" />
+        </property>
+        <property name="contactNumber" type="string">
+            <column name="CONTACT" length="20" />
+        </property>
+        <property name="emailID" type="string">
+            <column name="EMAIL" length="20" />
+        </property>
+        <property name="qualification" type="string">
+            <column name="QUALIFICATION" length="20" />
+        </property>
+        <property name="experience" type="string">
+            <column name="EXPERIENCE" length="20" />
+        </property>
+        <property name="curindustry" type="string">
+            <column name="CURRENTINDUSTRY" length="30" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" />
+        </property>
+        <property name="cPassword" type="string">
+            <column name="CPASSWORD" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

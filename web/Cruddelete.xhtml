@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Top Jobs</title>
+        <link rel="stylesheet" href="css/style.css"/>
+                    
+        <style>
+body {margin:0;}
+
+div.polaroid{
+    margin: auto; 
+    padding: 1px 16px; 
+    height: 500px;   
+}
+
+input[type=submit] {
+    width: 8%;
+    background-color: #21618C;
+    color: wheat;
+    padding: 6px 12px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #17c;
+}
+input[type=text], select {
+    width: 80%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #21618C;
+    position: fixed;
+    top: auto;
+    width: 100%;
+}
+
+.ul1 {
+    list-style-type: none;
+    margin: 0;
+    background-image: url("images/2.jpg");
+    background-size: cover;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+    padding: 16px 34px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+li a:hover:not(.active) {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+li a.active {
+    background-color: orangered;
+    color: white;
+}
+</style>
+
+    </h:head>
+    <h:body style="background-image: url('images/bg.jpg'); background-size: cover;" >
+        
+            <h:form>
+            <table class="ul1" border="0" align="top" width="100%" style="height:60px">
+            <tr>
+                <td align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 55pt; color: orangered; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;">
+                    Top Jobs
+                </td>
+                <td align="left" width="180">
+                    <img alt="top jobs logo" src="images/log.png" width="325" height="142" align="right" style="border-radius: 8px;" />
+                </td>
+            </tr>
+        </table> <br/><br/><br/><br/><br/><br/><br/><br/>
+        <div>
+        <ul>            
+            <li><a class="active" href="BaseTemplate.xhtml"><img alt="home" src="images/icons/home.png" style="width: 22px; height: 22px;" />&nbsp; Home</a></li>
+            <li><a href="ValidationLogin.xhtml"><img alt="jobseeker" src="images/icons/jobseeker.png" style="width: 22px; height: 22px;" />&nbsp; Job Seeker</a></li>
+            <li><a href="ContactUs.xhtml"><img alt="contactus" src="images/icons/Contactus.png" style="width: 22px; height: 22px;" />&nbsp; Contact US</a></li>
+            <li><a href="Registration.xhtml"><img alt="register" src="images/icons/register.png" style="width: 22px; height: 22px;" />&nbsp; Registration</a></li>
+            <li><a href="AboutUs.xhtml"><img alt="aboutus" src="images/icons/aboutus.png" style="width: 22px; height: 22px;" />&nbsp; About Us</a></li>
+            
+        </ul>
+        </div><br/><br/>
+        </h:form>
+        
+            <h:form><br/><br/>
+            <h:commandButton style="background-color: red; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; float: right; font-size: 18px; color: white" value="Logout" action="#{adminBean.logout}">
+            </h:commandButton>
+            </h:form>
+    
+        <p align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif; color: navy; font-size: 15pt; font-weight: bold">&nbsp;&nbsp;
+                
+                <h:form>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <h:commandButton id="btn" value="DELETE SKILL" action="Skilldelete" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 16px;"/>
+                        
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                    <h:commandButton id="btn1" value="DELETE CITY" action="Citydelete" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 16px;"/>
+                        
+                    <br/> <br/>  <br/> <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                    <h:commandButton id="btn2" value="DELETE KEYWORD" action="Keyworddelete" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 16px;"/>
+                        
+                    <br/> <br/>  <br/> <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                    <h:commandButton id="btn3" value="DELETE CATEGORY" action="Categorydelete" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 16px;"/>
+                        
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      
+                    <h:commandButton id="btn4" value="DELETE COMPANY" action="Companydelete" style="width: 200px; height: 60px; color: white; text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white; font-size: 16px;"/>
+                    
+                    </h:form>
+                   
+                </p>
+        <ui:include src="footer.xhtml"></ui:include>
+    </h:body>
+</html>
+
